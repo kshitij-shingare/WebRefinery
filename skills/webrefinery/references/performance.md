@@ -29,3 +29,4 @@ Vibecoded interfaces frequently suffer from severe rendering performance regress
 - **Composite Only**: Animate `transform` and `opacity`. Never animate `width`, `height`, `margin`, `padding`, or `left`/`top` as they trigger layout recalculations and repaint passes.
 - **Filter Restraint**: Keep `backdrop-filter: blur(...)` to 1 or 2 elevated surfaces (e.g., a sticky navigation bar), never stacked on every card.
 - **Will-Change**: Use `will-change: transform` only during active animations and remove it afterward to prevent persistent GPU memory reservation.
+

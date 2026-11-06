@@ -180,3 +180,4 @@ WebRefinery operates at the AST, DOM, and CSS layer, making it completely stack-
 ## License
 
 This project is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](LICENSE). You are free to share and adapt this work for personal and commercial applications, provided appropriate attribution is maintained.
+

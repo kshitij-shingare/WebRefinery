@@ -26,3 +26,4 @@ Every refined interface must achieve baseline WCAG 2.2 AA compliance. Removing v
 - **Landmarks**: Use `<header>`, `<nav>`, `<main>`, `<section>`, `<aside>`, and `<footer>` rather than wrapping everything in nested generic `<div>`s.
 - **Heading Order**: Exactly one `<h1>` per page context, followed logically by `<h2>` and `<h3>`. Never skip levels for cosmetic size preferences.
 - **Accessible Icons**: Decorative icons get `aria-hidden="true"`. Actionable icons (e.g. icon-only buttons) require an `aria-label` or visually hidden text.
+

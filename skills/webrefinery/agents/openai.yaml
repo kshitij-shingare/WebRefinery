@@ -2,3 +2,4 @@ interface:
   display_name: "WebRefinery"
   short_description: "Autonomous design system refactoring and visual polish engine"
   default_model: "gpt-4o"
+
