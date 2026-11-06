@@ -1,0 +1,27 @@
+{
+  "name": "webrefinery",
+  "version": "1.0.0",
+  "description": "Autonomous Design System Refactoring & Visual Polish Engine for AI Agents & Engineers",
+  "author": "Kshitij Shingare <kshitijshingare49@gmail.com> (https://github.com/kshitij-shingare)",
+  "license": "CC-BY-4.0",
+  "main": "skills/webrefinery/scripts/audit.mjs",
+  "type": "module",
+  "scripts": {
+    "audit": "node skills/webrefinery/scripts/audit.mjs",
+    "snapshot": "node skills/webrefinery/scripts/snapshot.mjs",
+    "story": "node skills/webrefinery/scripts/story.mjs"
+  },
+  "keywords": [
+    "design-system",
+    "ui-refactoring",
+    "ai-agent-skill",
+    "webrefinery",
+    "unslop",
+    "accessibility",
+    "tailwind",
+    "frontend-craft"
+  ],
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}

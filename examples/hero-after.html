@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ember — Invoicing for independent studios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #0c0d10;
+        color: #e4e4e7;
+        -webkit-font-smoothing: antialiased;
+      }
+      .font-mono {
+        font-family: "JetBrains Mono", monospace;
+        font-feature-settings: "tnum" 1, "zero" 1;
+      }
+      .hairline {
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen selection:bg-orange-500/20 selection:text-orange-200">
+    <!-- Header -->
+    <header class="mx-auto max-w-5xl px-6 pt-6">
+      <div class="flex h-12 items-center justify-between border-b hairline pb-3">
+        <a href="#" class="flex items-center gap-2 text-sm font-semibold tracking-tight text-zinc-100">
+          <span class="inline-block h-2 w-2 rounded-full bg-orange-500"></span>
+          <span>Ember</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7 text-xs font-medium text-zinc-400">
+          <a href="#" class="hover:text-zinc-200 transition-colors">Features</a>
+          <a href="#" class="hover:text-zinc-200 transition-colors">Templates</a>
+          <a href="#" class="hover:text-zinc-200 transition-colors">Pricing</a>
+          <a href="#" class="hover:text-zinc-200 transition-colors">Changelog</a>
+        </nav>
+        <div class="flex items-center gap-3 text-xs">
+          <a href="#" class="px-2.5 py-1.5 text-zinc-400 hover:text-zinc-200 transition-colors">Log in</a>
+          <a href="#" class="rounded-md bg-zinc-100 px-3 py-1.5 font-medium text-zinc-900 hover:bg-white transition-colors">Start free</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Hero -->
+    <main class="mx-auto max-w-5xl px-6 pt-16 pb-24 text-center">
+      <!-- Announcement tag -->
+      <div class="inline-flex items-center gap-2 rounded-full border hairline bg-zinc-900/60 px-3 py-1 text-xs text-zinc-400">
+        <span class="text-zinc-500 font-mono">v2.4</span>
+        <span class="h-1 w-1 rounded-full bg-zinc-700"></span>
+        <span>Automatic multi-currency reconciliation</span>
+        <span class="text-zinc-500">→</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="mx-auto mt-6 max-w-2xl text-4xl sm:text-5xl font-medium tracking-tight text-zinc-100 leading-[1.15]">
+        Invoicing built for studios that balance every cent
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mx-auto mt-4 max-w-lg text-base text-zinc-400 leading-relaxed">
+        Issue line-item invoices, collect global bank transfers, and match receipts to bank feeds without manual reconciliations.
+      </p>
+
+      <!-- Actions -->
+      <div class="mt-8 flex items-center justify-center gap-3 text-xs">
+        <a href="#" class="rounded-md bg-orange-500 px-4 py-2 font-medium text-zinc-950 hover:bg-orange-400 transition-colors shadow-sm">
+          Create an invoice
+        </a>
+        <a href="#" class="rounded-md border hairline bg-zinc-900/80 px-4 py-2 font-medium text-zinc-300 hover:bg-zinc-800 transition-colors">
+          View sample receipt
+        </a>
+      </div>
+
+      <p class="mt-4 text-[11px] text-zinc-500 font-mono">No credit card required &middot; 14-day trial &middot; Export to CSV</p>
+
+      <!-- Real Product Visual (Invoice Ledger replacing generic blob) -->
+      <div class="mx-auto mt-14 max-w-2xl text-left">
+        <div class="rounded-xl border hairline bg-zinc-900/90 shadow-2xl backdrop-blur-sm overflow-hidden">
+          <!-- Top bar -->
+          <div class="flex items-center justify-between border-b hairline bg-zinc-950/60 px-5 py-3">
+            <div class="flex items-center gap-2">
+              <span class="h-2 w-2 rounded-full bg-zinc-700"></span>
+              <span class="text-xs font-medium text-zinc-300">INV-2026-084</span>
+              <span class="rounded bg-emerald-500/10 px-1.5 py-0.5 text-[10px] font-mono font-medium text-emerald-400">Paid</span>
+            </div>
+            <div class="text-[11px] font-mono text-zinc-500">Due Nov 15, 2026</div>
+          </div>
+
+          <!-- Invoice Details -->
+          <div class="p-6">
+            <div class="flex justify-between items-start text-xs border-b hairline pb-6">
+              <div>
+                <p class="text-[11px] font-mono uppercase tracking-wider text-zinc-500">Billed to</p>
+                <p class="mt-1 font-medium text-zinc-200">Linear Architecture Studio</p>
+                <p class="text-zinc-500">studio@linear.build</p>
+              </div>
+              <div class="text-right">
+                <p class="text-[11px] font-mono uppercase tracking-wider text-zinc-500">Total Due</p>
+                <p class="mt-1 text-xl font-medium font-mono text-zinc-100">$8,450.00</p>
+              </div>
+            </div>
+
+            <!-- Line Items Table -->
+            <div class="mt-5">
+              <table class="w-full text-left text-xs">
+                <thead>
+                  <tr class="text-[10px] font-mono uppercase tracking-wider text-zinc-500 border-b hairline pb-2">
+                    <th class="font-normal py-2">Description</th>
+                    <th class="font-normal py-2 text-right">Qty</th>
+                    <th class="font-normal py-2 text-right">Rate</th>
+                    <th class="font-normal py-2 text-right">Amount</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-zinc-800/40 font-mono text-[11px]">
+                  <tr>
+                    <td class="py-2.5 font-sans text-xs text-zinc-200">Brand Guidelines & Design Tokens</td>
+                    <td class="py-2.5 text-right text-zinc-400">1</td>
+                    <td class="py-2.5 text-right text-zinc-400">$4,800.00</td>
+                    <td class="py-2.5 text-right text-zinc-200">$4,800.00</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2.5 font-sans text-xs text-zinc-200">Interactive WebGL Prototype</td>
+                    <td class="py-2.5 text-right text-zinc-400">25 hrs</td>
+                    <td class="py-2.5 text-right text-zinc-400">$130.00</td>
+                    <td class="py-2.5 text-right text-zinc-200">$3,250.00</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2.5 font-sans text-xs text-zinc-200">Global Font Licensing Fee</td>
+                    <td class="py-2.5 text-right text-zinc-400">1</td>
+                    <td class="py-2.5 text-right text-zinc-400">$400.00</td>
+                    <td class="py-2.5 text-right text-zinc-200">$400.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Total summary -->
+            <div class="mt-4 pt-3 border-t hairline flex justify-between items-center text-xs">
+              <span class="text-zinc-500">Transferred via Stripe SEPA &middot; Reference #TXN-9021</span>
+              <div class="flex items-center gap-2">
+                <span class="text-zinc-400">Net Total:</span>
+                <span class="font-mono text-sm font-medium text-orange-400">$8,450.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+

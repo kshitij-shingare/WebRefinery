@@ -1,0 +1,7 @@
+node_modules/
+.story-frames/
+*.mp4
+*.png
+*.snapshot.html
+.DS_Store
+Thumbs.db
